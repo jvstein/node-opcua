@@ -573,7 +573,7 @@ export class ClientSessionImpl extends EventEmitter implements ClientSession {
 
         const request = new ReadRequest({
             nodesToRead,
-            timestampsToReturn: TimestampsToReturn.Neither
+            timestampsToReturn: TimestampsToReturn.Both
         });
 
         this.performMessageTransaction(request, (err: Error | null, response?: Response) => {
